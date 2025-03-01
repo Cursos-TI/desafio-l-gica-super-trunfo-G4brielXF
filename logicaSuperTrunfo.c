@@ -4,10 +4,15 @@
 // Tema 1 - Cadastro das Cartas
 
 int main() {
+int opcao;
 
-    /*CARTA1:*/                       /*Não consegui colocar "." nas casas das centenas*/
+    printf ("***BEM VINDO AO SUPER TRUNFO*** \n");
 
-    printf ("***BEM VINDO AO JOGO DE CARTAS SUPER TRUNFO*** \n");
+    printf("\n");
+
+
+    /*CARTA1:*/         
+    
 
     char Estado1 = 'A';
     char Nome1[15] = "minasgerais"; 
@@ -101,7 +106,7 @@ printf ("\n");
     float PIBpercapta2 = (float) PIB2 / População2;
     float SuperPoder2 = (float) População2 + Área2 + PIB2 + Pontos2 + PIBpercapta2 + DensidadePopulacional2;
 
-printf ("\n");
+
 printf ("\n");
 
     /*Carta 2: local para cadastrar as informações*/
@@ -154,7 +159,6 @@ printf ("\n");
     /*Carta 2: Resultados do cadastro*/
 
     printf ("\n");
-    printf ("\n");
 
     printf ("****RESULTADOS DA CIDADE 2**** \n");
 
@@ -176,72 +180,87 @@ printf ("\n");
 
     printf ("*** HORA DO DUELO ***\n");
 
+    printf ("\n");
+    printf ("## Escolha qual atributo usar para o duelo ## \n");
+    printf ("\n");
+    printf ("1. População\n");
+    printf ("2. Área \n");
+    printf ("3. PIB \n");
+    printf ("4. Pontos Turísticos\n");
+    printf ("5. Densidade Populacional \n");
+    printf ("6. PIB per capita \n");
+    printf ("7. SUPER PODER!! \n");
+    printf ("\n");
+    printf ("ESCOLHA UMA OPÇÃO:");
+    scanf("%d", &opcao);
+    
+switch (opcao)
+{
+case 1:
     if (População1 > População2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (População2 > População1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
+    break;
+case 2:
 
     if (Área1 > Área2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!! \n");
+    }else if (Área1 < Área2){
+        printf ("Cidade 2 Venceu!! \n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
-
+    break;
+case 3:
     if (PIB1 > PIB2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (PIB2 > PIB1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
-
+    break;
+case 4:
     if (Pontos1 > Pontos2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (Pontos2 > Pontos1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
-
-printf ("!!!A cidade com Menor Densidade Populacional Vence!!! \n");
-printf("\n");
-
+    break;
+case 5:
     if (DensidadePopulacional1 < DensidadePopulacional2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (População2 < População1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
-
+    break;
+case 6:
     if (PIBpercapta1 > PIBpercapta2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (PIBpercapta1 > PIBpercapta1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-
-printf("\n");
-
+    break;
+case 7:
     if (SuperPoder1 > SuperPoder2){
-        printf ("A Cidade 1 Venceu!! \n");
-    }else{
-        printf ("A cidade 2 Venceu!! \n");
+        printf ("Cidade 1 Venceu!!!\n");
+    } else if (SuperPoder2 > SuperPoder1){
+        printf ("Cidade 2 Venceu!!!\n");
+    } else {
+        printf ("Empatado! \n");
     }
-printf("\n");
+    break;
 
-printf("***AGORA VAMOS VER QUAL CIDADE É A VENCEDORA*** \n");
-printf("\n");
-
-printf("!!Com base nos resultados do duelo...!\n");
-printf("\n");
-
-printf("A cidade vencedora é: %s!!!\n", Nome1);
-printf("\n");
-
+}
     return 0;
 }
